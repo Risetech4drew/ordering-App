@@ -125,8 +125,6 @@ header {
   width: 100%;
   margin: 45px auto 0;
   background: #fff;
-
-  /* border: 2px solid blue; */
 }
 
 .orderList h2 {
@@ -233,4 +231,18 @@ input {
   color: var(--white, #fff);
   font-family: Verdana;
   font-weight: 700;
+}
+.message-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 10px;
+  background: #ecfdf5;
+  border-radius: 3px;
+}
+.message-text {
+  color: #065f46;
+
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
 }

@@ -1,5 +1,7 @@
 import { menuArray } from "./data.js";
+const customerFormDetails = document.getElementById("customer-details");
 const ordersArray = [];
+
 document.addEventListener("click", function (e) {
   if (e.target.dataset.itemId) {
     handleAddItemClick(e.target.dataset.itemId);
@@ -8,6 +10,19 @@ document.addEventListener("click", function (e) {
   } else if (e.target.id === "purchase-btn") {
     handlePurchaseBtn();
   }
+});
+customerFormDetails.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const customerFormData = new FormData(customerFormDetails);
+
+  const name = customerFormData.get("customerName");
+
+  document.getElementById("payment-modal").style.display = "none";
+
+  document.getElementById("orderList").innerHTML = `
+  <div class="message-container">
+    <p class="message-text">Thanks, ${name}! Your order is on its way!</p>
+  </div>`;
 });
 
 function handlePurchaseBtn() {
