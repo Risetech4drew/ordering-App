@@ -200,12 +200,27 @@ header {
   right: 0;
   margin: auto;
 }
+.close-modal-btn {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  border: none;
+  font-family: Verdana;
+  font-weight: 700;
+  background: #fff;
+  color: #757575;
+  font-size: 18px;
+}
+.close-modal-btn:hover {
+  color: red;
+}
 .modal-title {
   font-family: Verdana;
   font-size: 20px;
   font-weight: 700;
   line-height: 31px;
   text-align: center;
+  margin-top: 30px;
 }
 form {
   display: flex;
@@ -245,4 +260,21 @@ input {
   text-align: center;
   font-size: 20px;
   font-weight: 400;
+}
+.reload-btn {
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background: #16db99;
+  color: #fff;
+  font-family: Verdana;
+  font-weight: 700;
+}
+.reload-btn:hover {
+  box-shadow: 1px 1px 6px 4px #16db99;
+}
+.reload-btn:active {
+  box-shadow: none;
 }

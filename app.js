@@ -9,8 +9,18 @@ document.addEventListener("click", function (e) {
     removeItem(e.target.dataset.removeItem);
   } else if (e.target.id === "purchase-btn") {
     handlePurchaseBtn();
+  } else if (e.target.id === "reload-btn") {
+    reloadPage();
+  } else if (e.target.id === "close-modal-btn") {
+    closePaymentModal();
   }
 });
+function closePaymentModal() {
+  document.getElementById("payment-modal").style.display = "none";
+}
+function reloadPage() {
+  window.location.reload();
+}
 customerFormDetails.addEventListener("submit", function (e) {
   e.preventDefault();
   const customerFormData = new FormData(customerFormDetails);
@@ -22,7 +32,8 @@ customerFormDetails.addEventListener("submit", function (e) {
   document.getElementById("orderList").innerHTML = `
   <div class="message-container">
     <p class="message-text">Thanks, ${name}! Your order is on its way!</p>
-  </div>`;
+  </div>
+  <button class="reload-btn" id="reload-btn">New order</button>`;
 });
 
 function handlePurchaseBtn() {
