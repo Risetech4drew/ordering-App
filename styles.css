@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Smythe;
+  user-select: none;
 }
 /* layout */
 header,
