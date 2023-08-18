@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Jimmy's Diner ordering App</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="heading-text">Jimmy's Diner</h1>
+      <p class="sub-text">The best burgers and pizzas in town.</p>
+      <p></p>
+    </header>
+    <main>
+      <div id="menu" class="menu"></div>
+      <div id="orderList" class="orderList">
+        <h2>Your Order</h2>
+        <div id="orders-container" class="orders"></div>
+        <div class="divider"></div>
+        <div class="total-container">
+          <p class="total-text">Total price</p>
+          <p id="total-el" class="total-price">$65</p>
+        </div>
+        <button id="purchase-btn" class="purchase-btn">complete order</button>
+      </div>
+    </main>
+    <div class="payment-modal" id="payment-modal">
+      <h2 class="modal-title">Enter card details</h2>
+      <form action="">
+        <input
+          type="text"
+          id="name-input"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+        <input
+          type="number"
+          id="card-number"
+          name="cardNumber"
+          placeholder="Enter card number"
+          required
+        />
+        <input
+          type="number"
+          id="cvv-input"
+          name="cvvInput"
+          placeholder="Enter CVV"
+          required
+        />
+        <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
+      </form>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

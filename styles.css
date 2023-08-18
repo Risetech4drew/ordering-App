@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  font-family: Smythe;
+}
+/* layout */
+header,
+main {
+  width: 290px;
+  margin: 0 auto;
+}
+header {
+  background-image: url("image/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.heading-text {
+  font-size: 30px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  width: 169px;
+}
+.heading-text,
+.sub-text {
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 30px;
+}
+.sub-text {
+  width: 275px;
+  font-size: 15px;
+  line-height: 14px;
+  margin-top: 0;
+}
+
+.menu {
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+}
+.item {
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+  /* border: 2px solid blue; */
+  position: relative;
+  margin-bottom: 30px;
+}
+.item-inner {
+  display: flex;
+}
+.item-graphic {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 40px;
+}
+.item-details {
+  margin-left: 20px;
+}
+.item-title {
+  font-size: 24px;
+  font-family: Smythe;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  color: #000;
+  margin-bottom: 0;
+}
+.item-description {
+  color: #8b8b8b;
+  font-size: 14px;
+  font-family: Smythe;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 5px 0 0 0;
+}
+.item-price {
+  font-family: Smythe;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin-top: 3px;
+}
+.ellipse {
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #dedede;
+  border-radius: 50%;
+  display: flex;
+}
+.add-btn {
+  margin: auto;
+  color: #3c3c3c;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  background: #d2d2d2;
+}
+.orderList {
+  display: none;
+  width: 100%;
+  margin: 45px auto 0;
+  background: #fff;
+
+  /* border: 2px solid blue; */
+}
+
+.orderList h2 {
+  text-align: center;
+}
+
+.ordered-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ordered-item .item-name {
+  font-size: 24px;
+  line-height: 17px;
+  display: flex;
+}
+
+.remove-item-btn {
+  margin-left: 13px;
+  border: none;
+  color: #bbb;
+  font-size: 12px;
+  background: #fff;
+  font-weight: 400;
+  line-height: 24px;
+}
+.remove-item-btn:hover {
+  color: red;
+}
+.ordered-item .item-price {
+  font-size: 20px;
+  line-height: 24px;
+}
+.total-container {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total-text {
+  width: 280px;
+  font-size: 20px;
+}
+.total-price {
+  font-size: 20px;
+}
+.purchase-btn {
+  padding: 15px 30px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white, #fff);
+  font-family: Verdana;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  background: #16db99;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+.payment-modal {
+  width: 280px;
+  border-radius: 4px;
+  box-shadow: -1px 1px 35px -1px rgba(66, 68, 90, 1);
+  /* border: 2px solid blue; */
+  background: #fff;
+  display: none;
+  position: fixed;
+  top: 175px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.modal-title {
+  font-family: Verdana;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 31px;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  width: 200px;
+  margin: 0 0 20px 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #757575;
+  font-family: verdana;
+  color: #757575;
+}
+.pay-btn {
+  margin: 10px 0 20px 0;
+  padding: 10px 20px;
+  width: 244px;
+  background: #16db99;
+  border: none;
+  border-radius: 4px;
+  color: var(--white, #fff);
+  font-family: Verdana;
+  font-weight: 700;
+}
