@@ -111,6 +111,9 @@ header {
   background: #fff;
   cursor: pointer;
 }
+.add-btn:active {
+  background-color: #fff;
+}
 .divider {
   width: 100%;
   height: 1px;
