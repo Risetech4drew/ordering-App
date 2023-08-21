@@ -1,6 +1,10 @@
 import { menuArray } from "./data.js";
 const customerFormDetails = document.getElementById("customer-details");
+
 const ordersArray = [];
+let pizzaCount = 0;
+let hamburgerCount = 0;
+let beerCount = 0;
 
 document.addEventListener("click", function (e) {
   if (e.target.dataset.itemId) {
@@ -46,9 +50,34 @@ function handleAddItemClick(itemId) {
   })[0];
 
   if (selectedItem) {
-    ordersArray.push(selectedItem);
+    if (!ordersArray.includes(selectedItem)) {
+      ordersArray.push(selectedItem);
+    } else if (ordersArray.includes(selectedItem)) {
+      handleTotalPricePerItem(selectedItem);
+      handleQuantityCount(selectedItem);
+    }
+
     renderCart();
     getTotalPrice();
+  }
+}
+function handleQuantityCount(item) {
+  if (item.name === "Pizza") {
+    item.quantity += 1;
+  } else if (item.name === "Hamburger") {
+    item.quantity += 1;
+  } else if (item.name === "Beer") {
+    item.quantity += 1;
+  }
+}
+
+function handleTotalPricePerItem(item) {
+  if (item.name === "Pizza") {
+    item.price += 14;
+  } else if (item.name === "Hamburger") {
+    item.price += 12;
+  } else if (item.name === "Beer") {
+    item.price += 12;
   }
 }
 function getTotalPrice() {
@@ -86,7 +115,8 @@ function renderCart() {
   ordersArray.forEach(function (item) {
     document.getElementById("orders-container").innerHTML += `
     <div class="ordered-item">
-      <p class="item-name" id="${item.id}">${item.name}<button class="remove-item-btn" data-remove-item="${item.id}">remove</button></p>
+      <p class="item-name">${item.name}<button class="remove-item-btn" data-remove-item="${item.id}">remove</button></p>
+      <p class="quantity-count-text">x${item.quantity}</p>
       <p><span class="item-price">$${item.price}</span></p>
     </div>`;
   });
