@@ -90,16 +90,47 @@ function getTotalPrice() {
 }
 
 function removeItem(itemId) {
-  const itemIndex = ordersArray.findIndex(function (item) {
+  const targetItem = ordersArray.find(function (item) {
     return item.id === parseInt(itemId);
   });
+  if (targetItem.quantity > 0 && targetItem.price > 0) {
+    decreaseQuantityCount(targetItem);
+    decreaseTotalItemCost(targetItem);
+  } else if (targetItem.quantity <= 1 && targetItem.price <= 1) {
+    const itemIndex = ordersArray.indexOf(targetItem);
+    ordersArray.splice(itemIndex, 1);
+  }
 
-  ordersArray.splice(itemIndex, 1);
-  if (ordersArray.length === 0) {
-    document.getElementById("orderList").style.display = "none";
-  } else {
-    renderCart();
-    updateTotalPrice();
+  renderCart();
+  updateTotalPrice();
+
+  // const itemIndex = ordersArray.findIndex(function (item) {
+  //   return item.id === parseInt(itemId);
+  // });
+  // ordersArray.splice(itemIndex, 1);
+  // if (ordersArray.length === 0) {
+  //   document.getElementById("orderList").style.display = "none";
+  // } else {
+  //   renderCart();
+  //   updateTotalPrice();
+  // }
+}
+function decreaseTotalItemCost(item) {
+  if (item.name === "Pizza") {
+    item.price -= 14;
+  } else if (item.name === "Hamburger") {
+    item.price -= 12;
+  } else if (item.name === "Beer") {
+    item.price -= 12;
+  }
+}
+function decreaseQuantityCount(item) {
+  if (item.name === "Pizza") {
+    item.quantity -= 1;
+  } else if (item.name === "Hamburger") {
+    item.quantity -= 1;
+  } else if (item.name === "Beer") {
+    item.quantity -= 1;
   }
 }
 function updateTotalPrice() {
