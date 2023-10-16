@@ -1,24 +1,11 @@
 import { menuArray } from "./data.js";
 const customerFormDetails = document.getElementById("customer-details");
-
 const ordersArray = [];
 let pizzaCount = 0;
 let hamburgerCount = 0;
 let beerCount = 0;
+const purchased = [];
 
-document.addEventListener("click", function (e) {
-  if (e.target.dataset.itemId) {
-    handleAddItemClick(e.target.dataset.itemId);
-  } else if (e.target.dataset.removeItem) {
-    removeItem(e.target.dataset.removeItem);
-  } else if (e.target.id === "purchase-btn") {
-    handlePurchaseBtn();
-  } else if (e.target.id === "reload-btn") {
-    reloadPage();
-  } else if (e.target.id === "close-modal-btn") {
-    closePaymentModal();
-  }
-});
 function closePaymentModal() {
   document.getElementById("payment-modal").style.display = "none";
 }
@@ -103,17 +90,6 @@ function removeItem(itemId) {
 
   renderCart();
   updateTotalPrice();
-
-  // const itemIndex = ordersArray.findIndex(function (item) {
-  //   return item.id === parseInt(itemId);
-  // });
-  // ordersArray.splice(itemIndex, 1);
-  // if (ordersArray.length === 0) {
-  //   document.getElementById("orderList").style.display = "none";
-  // } else {
-  //   renderCart();
-  //   updateTotalPrice();
-  // }
 }
 function decreaseTotalItemCost(item) {
   if (item.name === "Pizza") {
@@ -142,24 +118,36 @@ function updateTotalPrice() {
 }
 
 function renderCart() {
-  document.getElementById("orders-container").innerHTML = "";
-  ordersArray.forEach(function (item) {
-    document.getElementById("orders-container").innerHTML += `
-    <div class="ordered-item">
+  const orderList = ordersArray
+    .filter((item) => item.quantity !== 0)
+    .map(
+      (item) =>
+        `<div class="ordered-item">
       <p class="item-name">${item.name}<button class="remove-item-btn" data-remove-item="${item.id}">remove</button></p>
       <p class="quantity-count-text">x${item.quantity}</p>
       <p><span class="item-price">$${item.price}</span></p>
-    </div>`;
-  });
+      </div>`
+    )
+    .join(" ");
+  document.getElementById("orders-container").innerHTML = orderList;
 
-  document.getElementById("orderList").style.display = "block";
+  const orderElem = document.getElementById("orderList");
+
+  orderElem.style.display = "block";
 }
+function getIngredients(ingredientsArr) {
+  let ingredientsList = "";
 
+  for (let ingredients of ingredientsArr) {
+    ingredientsList += ingredients + ", ";
+  }
+  return ingredientsList;
+}
 function getMenu() {
-  let menuList = "";
-  menuArray.forEach(function (item) {
-    menuList += `
-        <div class="item">
+  const menuList = menuArray
+    .map(
+      (item) =>
+        `<div class="item">
             <div class="item-inner">
                 <div class="item-graphic">${item.emoji}</div>
                 <div class = "item-details">
@@ -174,21 +162,30 @@ function getMenu() {
                 </div>
             </div>
         </div>
-        <div class="divider"></div>`;
-  });
-
-  return menuList;
+        <div class="divider"></div>`
+    )
+    .join(" ");
+  document.getElementById("menu").innerHTML = menuList;
+  document.querySelector("main").onclick = (e) => {
+    if (e.target.dataset.itemId) {
+      handleAddItemClick(e.target.dataset.itemId);
+    } else if (e.target.dataset.removeItem) {
+      removeItem(e.target.dataset.removeItem);
+      const total = document.getElementById("total-el");
+      const removeDollarSign = total.innerText.split("").splice(1).join("");
+      const orderContainer = document.getElementById("orderList");
+      //
+      if (Number(removeDollarSign) === 0) {
+        orderContainer.style.display = "none";
+      }
+    } else if (e.target.id === "purchase-btn") {
+      handlePurchaseBtn();
+    } else if (e.target.id === "reload-btn") {
+      reloadPage();
+    } else if (e.target.id === "close-modal-btn") {
+      closePaymentModal();
+    }
+  };
 }
 
-function getIngredients(ingredientsArr) {
-  let ingredientsList = "";
-  for (let ingredients of ingredientsArr) {
-    ingredientsList += ingredients + ", ";
-  }
-  return ingredientsList;
-}
-
-function renderMenu() {
-  document.getElementById("menu").innerHTML = getMenu();
-}
-renderMenu();
+getMenu();

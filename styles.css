@@ -1,14 +1,16 @@
-body {
+* {
   margin: 0;
-  font-family: Smythe;
+  font-family: sans-serif, Smythe;
   user-select: none;
 }
+
 /* layout */
 header,
 main {
   width: 380px;
   margin: 0 auto;
 }
+
 header {
   background-image: url("image/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png");
   background-repeat: no-repeat;
@@ -16,12 +18,14 @@ header {
   margin-bottom: 30px;
   padding: 10px;
 }
+
 .heading-text {
   font-size: 30px;
   line-height: 24px;
   margin-bottom: 10px;
   width: 169px;
 }
+
 .heading-text,
 .sub-text {
   color: #fff;
@@ -29,6 +33,7 @@ header {
   font-style: normal;
   margin-left: 30px;
 }
+
 .sub-text {
   width: 275px;
   font-size: 15px;
@@ -41,6 +46,7 @@ header {
   padding: 0;
   width: 100%;
 }
+
 .item {
   width: 100%;
   background: #fff;
@@ -49,9 +55,11 @@ header {
   position: relative;
   margin-bottom: 30px;
 }
+
 .item-inner {
   display: flex;
 }
+
 .item-graphic {
   width: 40px;
   display: flex;
@@ -61,9 +69,11 @@ header {
   text-align: center;
   font-size: 40px;
 }
+
 .item-details {
   margin-left: 20px;
 }
+
 .item-title {
   font-size: 24px;
   font-family: Smythe;
@@ -73,6 +83,7 @@ header {
   color: #000;
   margin-bottom: 0;
 }
+
 .item-description {
   color: #8b8b8b;
   font-size: 14px;
@@ -82,6 +93,7 @@ header {
   line-height: 24px;
   margin: 5px 0 0 0;
 }
+
 .item-price {
   font-family: Smythe;
   font-size: 20px;
@@ -91,6 +103,7 @@ header {
   color: #000;
   margin-top: 3px;
 }
+
 .ellipse {
   position: absolute;
   top: 25%;
@@ -101,6 +114,7 @@ header {
   border-radius: 50%;
   display: flex;
 }
+
 .add-btn {
   margin: auto;
   color: #3c3c3c;
@@ -111,15 +125,18 @@ header {
   background: #fff;
   cursor: pointer;
 }
+
 .add-btn:active {
   background-color: #fff;
 }
+
 .divider {
   width: 100%;
   height: 1px;
   margin: 0 auto;
   background: #d2d2d2;
 }
+
 .orderList {
   display: none;
   width: 100%;
@@ -152,26 +169,32 @@ header {
   font-weight: 400;
   line-height: 24px;
 }
+
 .remove-item-btn:hover {
   color: red;
 }
+
 .ordered-item .item-price {
   font-size: 20px;
   line-height: 24px;
 }
+
 .total-container {
   margin-top: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .total-text {
   width: 280px;
   font-size: 20px;
 }
+
 .total-price {
   font-size: 20px;
 }
+
 .purchase-btn {
   padding: 15px 30px;
   margin-top: 20px;
@@ -187,6 +210,7 @@ header {
   background: #16db99;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
+
 .payment-modal {
   width: 280px;
   border-radius: 4px;
@@ -200,6 +224,7 @@ header {
   right: 0;
   margin: auto;
 }
+
 .close-modal-btn {
   position: absolute;
   top: 2%;
@@ -211,9 +236,11 @@ header {
   color: #757575;
   font-size: 18px;
 }
+
 .close-modal-btn:hover {
   color: red;
 }
+
 .modal-title {
   font-family: Verdana;
   font-size: 20px;
@@ -222,11 +249,13 @@ header {
   text-align: center;
   margin-top: 30px;
 }
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 input {
   width: 200px;
   margin: 0 0 20px 0;
@@ -236,6 +265,7 @@ input {
   font-family: verdana;
   color: #757575;
 }
+
 .pay-btn {
   margin: 10px 0 20px 0;
   padding: 10px 20px;
@@ -247,6 +277,7 @@ input {
   font-family: Verdana;
   font-weight: 700;
 }
+
 .message-container {
   width: 80%;
   margin: 0 auto;
@@ -254,6 +285,7 @@ input {
   background: #ecfdf5;
   border-radius: 3px;
 }
+
 .message-text {
   color: #065f46;
 
@@ -261,6 +293,7 @@ input {
   font-size: 20px;
   font-weight: 400;
 }
+
 .reload-btn {
   display: block;
   margin: 10px auto 0;
@@ -272,9 +305,11 @@ input {
   font-family: Verdana;
   font-weight: 700;
 }
+
 .reload-btn:hover {
   box-shadow: 1px 1px 6px 4px #16db99;
 }
+
 .reload-btn:active {
   box-shadow: none;
 }
