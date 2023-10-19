@@ -1,0 +1,59 @@
+[33mcommit 3db8336bf2516d498964cf3ee8b74d715be281cb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: iconicspidey <64977181+iconicspidey@users.noreply.github.com>
+Date:   Mon Oct 16 12:40:09 2023 +0100
+
+    refactor
+
+[33mcommit bf6b7c2b7398fdb39ec77eb3e395df7bd8b0e37b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Mon Aug 21 19:11:05 2023 +0200
+
+    implemented remove-btn to decrease item quantity
+
+[33mcommit 590fd40aa5e1f2d2db96b2c4efad16691436d524[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Mon Aug 21 15:54:11 2023 +0200
+
+    item appear once and increment quantity by clicking add-btn
+
+[33mcommit fbb1291f1e336d66cf74c215e139e69975c0655c[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 11:12:43 2023 +0200
+
+    added make new order and close modal features
+
+[33mcommit 8d25a94877ffe223d12e1c912af44eb64d43867e[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 09:56:10 2023 +0200
+
+    user can input info in the form and render a message
+
+[33mcommit 37dab93c9c40df3c29921632592371baea6a208b[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 08:46:23 2023 +0200
+
+    removed default background to add-btn when clicked
+
+[33mcommit 406d628deff63e6689ea546abb54fdf670ad645f[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 08:40:27 2023 +0200
+
+    set user-select property to none
+
+[33mcommit 92f07b1126df6dfce63cc2b569d8b23580b1a969[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 08:37:37 2023 +0200
+
+    added more pixels to the with of header and main section
+
+[33mcommit f18a699788bc7c04daf9d0e9699039962724e443[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 08:35:14 2023 +0200
+
+    changed width of headera and main section
+
+[33mcommit 585c55248467602992c9ee9bb4d78b6b02b26ed4[m
+Author: Risetech4drew <kanyinjiandy2@gmail.com>
+Date:   Fri Aug 18 08:20:46 2023 +0200
+
+    first commit
